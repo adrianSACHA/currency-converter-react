@@ -2,7 +2,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div>
        <form class="form js-form">
         <fieldset class="form__fieldset">
             <legend class="form__legend">
@@ -11,7 +11,7 @@ function App() {
             <p>
                 <label>
                     Wpisz kwotę jaką chcesz policzyć*:
-                    <input class="form__field js-ammount" type="number" name="ammount" step="0.01" required>
+                    <input class="form__field js-ammount" type="number" name="ammount" step="0.01" required />
                 </label>
             </p>
             <p>
