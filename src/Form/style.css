@@ -1,0 +1,51 @@
+.form {
+  width: 100%;
+  color: darkblue;
+  flex-basis: 650px;
+}
+
+.form__field {
+  border: 2px solid darkblue;
+  margin: 15px;
+  padding: 5px;
+  width: 50%;
+  flex-basis: 500px;
+  border-radius: 5px;
+}
+
+.form__field:required {
+  border-color: red;
+}
+
+.form__button {
+  width: 50%;
+  border: none;
+  background-color: darkblue;
+  color: white;
+  padding: 11px;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+.form__button:hover {
+  background-color: hsl(246, 71%, 60%);
+}
+
+.form__button:active {
+  background-color: hsl(246, 71%, 35%);
+}
+
+.form__fieldset {
+  border: 2px solid darkblue;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px 1px;
+  background-color: hsla(0, 0%, 98%, 0.74);
+}
+
+.form__legend {
+  background-color: darkblue;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+}
