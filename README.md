@@ -1,4 +1,4 @@
-![Currency Converter with REACT](./public/currencyConverter.png)
+![Currency Converter with REACT](/public/currencyConverter.png)
 
 ## Table of content
 1. Demo ✅
@@ -11,7 +11,7 @@
 https://adriansacha.github.io/currency-converter-react/
 
 ## 👀 PREVIEW
-![Currency Converter React Demo](./currencyConverterReact.gif)
+![Currency Converter React Demo](currencyConverterReact.gif)
 
 ## 📒 Description
 Simple currency conventer from PLN to 💷GBP and 💵USD.
