@@ -1,6 +1,8 @@
+import "./style.css";
+
 const Result = ({ result }) => (
   <div className="result">
-    Otrzymasz: 
+    Otrzymasz:
     <strong>{result}</strong>
   </div>
 );
