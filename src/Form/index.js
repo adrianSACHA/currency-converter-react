@@ -34,7 +34,7 @@ const Form = ({ calculateResult, setResult, body }) => {
       <label>
         Wybierz walutę:
         <select
-          className="form__field"
+          className="form__select"
           name="currency"
           value={currency}
           onChange={({ target }) => setCurrency(target.value)}
