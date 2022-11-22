@@ -1,4 +1,4 @@
-![Currency Converter with REACT](/public/currencyConverter.png)
+![Currency Converter with REACT](public/currencyConverter.png)
 
 ## Table of content
 1. Demo ✅
