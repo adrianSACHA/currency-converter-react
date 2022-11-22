@@ -1,17 +1,18 @@
 import './index.css';
 import Header from "./Header"
+import Container from "./Container"
 // import Form from "./Form";
 
 function App() {
   return (
     <>
-         <main className="form" >
-        <fieldset className="form__fieldset">
+      <Container>
             <Header 
-            className="form__legend" />
-                Kalkulator Walutowy - aktualny na 12.10.2022
+              title="Kalkulator Walutowy - aktualny na 12.10.2022"
+            />
+               
             
-            <form className="form" />
+            <form className="form">
                 <label>
                     Wpisz kwotę jaką chcesz policzyć*:
                     <input className="form__field" type="number" name="ammount" step="0.01" required />
@@ -28,14 +29,14 @@ function App() {
                     Otrzymasz: <strong>N/A
                     </strong>
                 </label>
-                    </fieldset>
+      
         <button className="form__button">Przelicz!</button>
    
-    
+    </form>
     <div>
         *pole obowiązkowe
         </div>
-        </main>
+        </Container>
         </>
       );
   }
