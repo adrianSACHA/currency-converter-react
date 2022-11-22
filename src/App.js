@@ -28,7 +28,6 @@ function App() {
         calculateResult={calculateResult}
         body={<Result result={result} />}
       />
-       
       <Footer title="* pole obowiązkowe" />
     </Container>
   );
