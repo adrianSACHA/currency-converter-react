@@ -1,11 +1,15 @@
+.form {
+  display: grid;
+  grid-template-rows: auto;
+}
+
 .form__field:required {
   border-color: red;
 }
 
 .form__button {
-  width: 50%;
   border: none;
-  background-color: darkblue;
+  background-color: hsl(180, 100%, 25%);
   color: white;
   padding: 11px;
   margin: 20px;
@@ -13,9 +17,9 @@
 }
 
 .form__button:hover {
-  background-color: hsl(246, 71%, 60%);
+  background-color: hsl(180, 100%, 65%);
 }
 
 .form__button:active {
-  background-color: hsl(246, 71%, 35%);
+  background-color: hsl(180, 100%, 35%);
 }
