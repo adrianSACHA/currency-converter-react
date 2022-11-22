@@ -10,14 +10,12 @@ html {
 
 body {
   font-family: "Lato", sans-serif;
-  align-content: center;
+  margin: 100px 200px;
   text-align: center;
-  align-items: center;
-  padding: 20px;
+  padding: 10px;
   background-image: url("./image.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
   overflow: auto;
-  justify-content: center;
 }
