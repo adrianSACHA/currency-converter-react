@@ -3,7 +3,7 @@
   grid-template-rows: auto;
 }
 
-.form__field:required {
+.form__select:required {
   border-color: red;
 }
 
