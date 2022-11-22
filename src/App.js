@@ -1,42 +1,43 @@
-import './App.css';
+import './index.css';
+import Header from "./Header"
+// import Form from "./Form";
 
 function App() {
   return (
-    <div>
-       <form class="form js-form">
-        <fieldset class="form__fieldset">
-            <legend class="form__legend">
+    <>
+         <main className="form" >
+        <fieldset className="form__fieldset">
+            <Header 
+            className="form__legend" />
                 Kalkulator Walutowy - aktualny na 12.10.2022
-            </legend>
-            <p>
+            
+            <form className="form" />
                 <label>
                     Wpisz kwotę jaką chcesz policzyć*:
-                    <input class="form__field js-ammount" type="number" name="ammount" step="0.01" required />
-                </label>
-            </p>
-            <p>
+                    <input className="form__field" type="number" name="ammount" step="0.01" required />
+                            </label>
+            
                 <label>
                     Wybierz walutę:
-                    <select class="form__field js-currency" name="currency">
+                    <select className="form__field" name="currency">
                         <option value="GBP">Funt</option>
                         <option value="USD">Dolar</option>
                     </select>
                 </label>
-            </p>
-            <p>
                 <label>
-                    Otrzymasz: <strong class="js-result">N/A
+                    Otrzymasz: <strong>N/A
                     </strong>
                 </label>
-            </p>
-        </fieldset>
-        <button class="form__button">Przelicz!</button>
-    </form>
-    <p>
+                    </fieldset>
+        <button className="form__button">Przelicz!</button>
+   
+    
+    <div>
         *pole obowiązkowe
-    </p>
-    </div>
-  );
-}
+        </div>
+        </main>
+        </>
+      );
+  }
 
 export default App;
