@@ -10,7 +10,7 @@ const Form = ({ calculateResult, setResult, body }) => {
     event.preventDefault();
     calculateResult(ammonutExchange, currency);
     setAmmountExchange("");
-    setCurrency("GBP");
+    setCurrency("USD");
     setResult("");
   };
 
