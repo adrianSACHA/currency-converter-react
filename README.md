@@ -1,3 +1,4 @@
+# Currency Converter in React.js by AdiSACHA
 ![Currency Converter with REACT](public/currencyConverter.png)
 
 ## Table of content
@@ -29,9 +30,6 @@ Type ammount you want to exchange and press "Przelicz". You wille have above but
 * Create React App
 * Babel
 * Webpack
-
-
-# Currency Converter in React.js by AdiSACHA
 
 # Getting Started with Create React App
 
