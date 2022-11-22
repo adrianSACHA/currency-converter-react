@@ -10,8 +10,6 @@ html {
 
 body {
   font-family: "Lato", sans-serif;
-  display: flex;
-  flex-basis: 700px;
   align-content: center;
   text-align: center;
   align-items: center;
@@ -22,6 +20,4 @@ body {
   background-size: auto;
   overflow: auto;
   justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
 }
