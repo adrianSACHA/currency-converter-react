@@ -31,10 +31,9 @@ const Form = ({ calculateResult, setResult, body }) => {
           />
         </div>
       </label>
-      <label>
+      <label className="form__select">
         Wybierz walutę:
         <select
-          className="form__select"
           name="currency"
           value={currency}
           onChange={({ target }) => setCurrency(target.value)}
