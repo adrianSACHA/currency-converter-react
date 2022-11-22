@@ -2,7 +2,7 @@ import "./style.css";
 import { useState } from "react";
 import { currencies } from "../currencies/index";
 
-const Form = ({ calculateResult, setResult }) => {
+const Form = ({ calculateResult, setResult, body }) => {
   const [ammonutExchange, setAmmountExchange] = useState("");
   const [currency, setCurrency] = useState(currencies[0].short);
 
@@ -48,7 +48,7 @@ const Form = ({ calculateResult, setResult }) => {
           ))};
         </select>
       </label>
-      <label>Otrzymasz: N/A</label>
+      {body}
       <button className="form__button">Przelicz!</button>
     </form>
   );
