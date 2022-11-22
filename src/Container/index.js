@@ -1,7 +1,7 @@
 import "./style.css"
 
 const Container = ({children}) => (
-  <main className="form">
+  <main className="container">
     {children}
   </main>
   );
