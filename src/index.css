@@ -16,7 +16,7 @@ body {
   justify-content: center;
   padding: 10px;
   background-image: url("./image.jpg");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: center;
   background-size: auto;
   overflow: auto;
