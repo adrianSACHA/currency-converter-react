@@ -10,8 +10,9 @@ html {
 
 body {
   font-family: "Lato", sans-serif;
-  margin: 100px 200px;
+  justify-items: center;
   text-align: center;
+
   padding: 10px;
   background-image: url("./image.jpg");
   background-repeat: no-repeat;
