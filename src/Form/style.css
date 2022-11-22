@@ -3,8 +3,16 @@
   grid-template-rows: auto;
 }
 
-.form__select:required {
+.form__input {
+margin: 10px;
+}
+
+.form__ammount:required {
   border-color: red;
+}
+
+.form__select {
+  margin: 10px;
 }
 
 .form__button {
@@ -12,7 +20,7 @@
   background-color: hsl(180, 100%, 25%);
   color: white;
   padding: 11px;
-  margin: 20px;
+  margin: 15px;
   border-radius: 5px;
 }
 
