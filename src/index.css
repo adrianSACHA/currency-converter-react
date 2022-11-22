@@ -8,7 +8,7 @@ html {
   box-sizing: inherit;
 }
 
-.body {
+body {
   font-family: "Lato", sans-serif;
   display: flex;
   flex-basis: 700px;
@@ -16,7 +16,7 @@ html {
   text-align: center;
   align-items: center;
   padding: 20px;
-  background-image: url("../images/image1.jpg");
+  background-image: url("./image.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
