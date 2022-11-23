@@ -23,6 +23,7 @@ const Form = ({ calculateResult, setResult, body }) => {
             className="form__ammount"
             placeholder="Wpisz kwotę..."
             type="number"
+            autofocus
             name="ammount"
             step="0.01"
             value={ammonutExchange}
