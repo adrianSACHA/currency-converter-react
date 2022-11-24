@@ -39,7 +39,9 @@ const Form = ({ calculateResult, setResult, body }) => {
           onChange={({ target }) => setCurrency(target.value)}
         >
           {currencies.map((currency) => (
-            <option key={currency.short} value={currency.short}>
+            <option key={currency.short} 
+            value={currency.short}
+            >
               {currency.name}
             </option>
           ))}
@@ -51,4 +53,5 @@ const Form = ({ calculateResult, setResult, body }) => {
     </form>
   );
 };
+
 export default Form;
