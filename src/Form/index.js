@@ -16,36 +16,34 @@ const Form = ({ calculateResult, setResult, body }) => {
 
   return (
     <form className="form" onSubmit={onFormSubmit}>
+      Wpisz kwotę *:
       <label className="form__input">
-        <div>Wpisz kwotę jaką chcesz policzyć*:</div>
-        <div>
-          <input
-            className="form__ammount"
-            placeholder="Wpisz kwotę..."
-            type="number"
-            autofocus
-            name="ammount"
-            step="0.01"
-            value={ammonutExchange}
-            onChange={({ target }) => setAmmountExchange(target.value)}
-            required
-          />
-        </div>
+        <input
+          className="form__ammount"
+          placeholder="jaką chcesz policzyć"
+          type="number"
+          autofocus
+          name="ammount"
+          step="0.01"
+          value={ammonutExchange}
+          onChange={({ target }) => setAmmountExchange(target.value)}
+          required
+        />
       </label>
+      Wybierz walutę:
       <label className="form__select">
-        Wybierz walutę:
         <select
+          className="select"
           name="currency"
           value={currency}
           onChange={({ target }) => setCurrency(target.value)}
         >
-          {currencies.map(currency => (
-          <option 
-          key={currency.short} 
-          value={currency.short}>
-            {currency.name}
-          </option>
-          ))};
+          {currencies.map((currency) => (
+            <option key={currency.short} value={currency.short}>
+              {currency.name}
+            </option>
+          ))}
+          ;
         </select>
       </label>
       {body}
