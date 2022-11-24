@@ -1,7 +1,7 @@
 import "./style.css"
 
 const Header = ({title}) => (
-      <header className="form__legend">
+      <header className="header">
           {title}
       </header>
 )
