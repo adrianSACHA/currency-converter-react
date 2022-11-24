@@ -8,7 +8,7 @@ html {
   box-sizing: inherit;
 }
 
-body {
+#root {
   font-family: "Lato", sans-serif;
   justify-items: center;
   text-align: center;
