@@ -1,7 +1,7 @@
 .form {
   display: grid;
-  grid-template: repeat(4, 1fr) / 150px 200px;
-  justify-items: center;
+  grid-template-rows: auto;
+  justify-items: stretch;
   justify-content: center;
   align-items: center;
 }
@@ -18,6 +18,7 @@
 
 .form__input {
   margin: 5px;
+  grid-area: 1 / span 2;
 }
 
 .form__ammount {
@@ -36,6 +37,10 @@
 }
 
 .form__select {
+  grid-area: 2 / span 2;
+}
+
+.select {
   padding: 5px;
   width: 200px;
 }
@@ -46,6 +51,10 @@
   }
 }
 
+.form__footer {
+  grid-area: 3 / span 2;
+}
+
 .form__button {
   border: none;
   background-color: hsl(180, 100%, 25%);
@@ -53,8 +62,7 @@
   padding: 11px;
   margin: 10px;
   border-radius: 5px;
-  grid-area: 4 / span 2;
-  width: 100%;
+  
 }
 
 .form__button:hover {
