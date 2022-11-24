@@ -2,7 +2,7 @@ import "./style.css";
 
 const Result = ({ result }) => (
   <div className="result">
-    Otrzymasz: <strong>{result}</strong>
+    Otrzymasz: &nbsp; <strong>{result}</strong>
   </div>
 );
 
