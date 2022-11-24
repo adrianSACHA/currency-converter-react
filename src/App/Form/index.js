@@ -1,6 +1,6 @@
 import "./style.css";
 import { useState } from "react";
-import { currencies } from "..//currencies";
+import { currencies } from "../currencies";
 
 const Form = ({ calculateResult, setResult, body }) => {
   const [ammonutExchange, setAmmountExchange] = useState("");
