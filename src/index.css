@@ -20,4 +20,6 @@ html {
   background-size: cover;
   min-height: 100vh;
   overflow: auto;
+  flex-direction: column;
+  align-items: center;
 }
