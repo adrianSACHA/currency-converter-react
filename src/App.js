@@ -11,14 +11,11 @@ function App() {
   const [result, setResult] = useState(null);
 
   const calculateResult = (ammountExchange, currency) => {
-    const rateExchange = currencies.find(
+    const { rate, short } = currencies.find(
       ({ short }) => short === currency
-    ).rate;
-    const currencyFinal = currencies.find(
-      ({ short }) => short === currency
-    ).short;
-
-    setResult((ammountExchange / rateExchange).toFixed(2) + currencyFinal);
+    );
+    
+    setResult((ammountExchange / rate).toFixed(2) + short);
   };
 
   return (
