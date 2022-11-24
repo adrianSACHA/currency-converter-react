@@ -16,8 +16,10 @@ const Form = ({ calculateResult, setResult, body }) => {
 
   return (
     <form className="form" onSubmit={onFormSubmit}>
-      Wpisz kwotę *:
       <label className="form__input">
+        <span>
+          Wpisz kwotę *:
+        </span>
         <input
           className="form__ammount"
           placeholder="jaką chcesz policzyć"
@@ -30,26 +32,30 @@ const Form = ({ calculateResult, setResult, body }) => {
           required
         />
       </label>
-      Wybierz walutę:
-      <label>
+      <label className="form__select">
+        <span>
+          Wybierz walutę:
+          </span>
         <select
-          className="form__select"
+          className="select"
           name="currency"
           value={currency}
           onChange={({ target }) => setCurrency(target.value)}
         >
           {currencies.map((currency) => (
-            <option key={currency.short} 
-            value={currency.short}
-            >
+            <option key={currency.short} value={currency.short}>
               {currency.name}
             </option>
           ))}
           ;
         </select>
       </label>
-      {body}
-      <button className="form__button">Przelicz!</button>
+      <label className="form__footer">
+        {body}
+        <button className="form__button">
+          Przelicz!
+        </button>
+      </label>
     </form>
   );
 };
