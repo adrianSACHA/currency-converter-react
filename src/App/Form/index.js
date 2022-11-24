@@ -1,6 +1,6 @@
 import "./style.css";
 import { useState } from "react";
-import { currencies } from "../currencies";
+import { currencies } from "..//currencies";
 
 const Form = ({ calculateResult, setResult, body }) => {
   const [ammonutExchange, setAmmountExchange] = useState("");
@@ -10,16 +10,13 @@ const Form = ({ calculateResult, setResult, body }) => {
     event.preventDefault();
     calculateResult(ammonutExchange, currency);
     setAmmountExchange("");
-    setCurrency("USD");
     setResult("");
   };
 
   return (
     <form className="form" onSubmit={onFormSubmit}>
       <label className="form__input">
-        <span>
-          Wpisz kwotę *:
-        </span>
+        <span>Wpisz kwotę *:</span>
         <input
           className="form__ammount"
           placeholder="jaką chcesz policzyć"
@@ -33,9 +30,7 @@ const Form = ({ calculateResult, setResult, body }) => {
         />
       </label>
       <label className="form__select">
-        <span>
-          Wybierz walutę:
-          </span>
+        <span>Wybierz walutę:</span>
         <select
           className="select"
           name="currency"
@@ -52,9 +47,7 @@ const Form = ({ calculateResult, setResult, body }) => {
       </label>
       <label className="form__footer">
         {body}
-        <button className="form__button">
-          Przelicz!
-        </button>
+        <button className="form__button">Przelicz!</button>
       </label>
     </form>
   );
