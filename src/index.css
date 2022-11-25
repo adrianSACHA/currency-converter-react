@@ -14,7 +14,6 @@ html {
   text-align: center;
   display: flex;
   justify-content: center;
-  padding: 10px;
   background-image: url("./image2.jpg");
   background-position: center;
   background-size: cover;
