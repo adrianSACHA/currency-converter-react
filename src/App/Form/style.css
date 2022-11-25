@@ -4,6 +4,7 @@
   justify-items: stretch;
   justify-content: center;
   align-items: center;
+  grid-gap: 5px;
 }
 
 @media (max-width: 400px) {
@@ -17,42 +18,42 @@
 }
 
 .form__input {
-  margin: 5px;
+  padding: 5px;
+  margin: 10px;
   grid-area: 1 / span 2;
 }
 
 .form__ammount {
   padding: 5px;
+  margin: 10px;
   width: 200px;
-}
-
-@media (max-width: 400px) {
-  .form__ammount {
-    margin: 5px 0 10px 0;
-  }
 }
 
 .form__ammount:required {
   border-color: red;
 }
 
-.form__select {
+.form__selection {
   grid-area: 2 / span 2;
+  padding: 5px;
+  margin: 10px;
 }
 
-.select {
+.form__select {
   padding: 5px;
+  margin: 10px;
   width: 200px;
 }
 
 @media (max-width: 400px) {
-  .form__select {
+  .form__selection {
     margin: 5px 0 10px 0;
   }
 }
 
 .form__footer {
   grid-area: 3 / span 2;
+  margin: 10px;
 }
 
 .form__button {
@@ -62,7 +63,6 @@
   padding: 11px;
   margin: 10px;
   border-radius: 5px;
-  
 }
 
 .form__button:hover {
