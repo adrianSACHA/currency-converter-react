@@ -23,7 +23,9 @@ function App() {
       <Header title="Kalkulator Walutowy - aktualny na 12.10.2022" />
       <Form
         calculateResult={calculateResult}
-        body={<Result result={result} />}
+        body={
+        <Result result={result} />
+        }
       />
       <Footer title="* pole obowiązkowe" />
     </Container>
