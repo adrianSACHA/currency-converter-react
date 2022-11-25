@@ -1,4 +1,5 @@
 import "../index.css";
+import Clock from "./Clock";
 import Header from "./Header";
 import Container from "./Container";
 import Form from "./Form";
@@ -18,8 +19,7 @@ function App() {
 
   return (
     <Container>
-      <p>Dzisiaj jest: {Date}</p>
-
+      <Clock />
       <Header title="Kalkulator Walutowy - aktualny na 12.10.2022" />
       <Form
         calculateResult={calculateResult}
