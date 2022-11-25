@@ -29,10 +29,10 @@ const Form = ({ calculateResult, setResult, body }) => {
           required
         />
       </label>
-      <label className="form__select">
+      <label className="form__selection">
         <span>Wybierz walutę:</span>
         <select
-          className="select"
+          className="form__select"
           name="currency"
           value={currency}
           onChange={({ target }) => setCurrency(target.value)}
