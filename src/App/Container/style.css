@@ -1,6 +1,5 @@
 .container {
   max-width: 650px;
-  min-height: 50vh;
   margin: 15px;
   color: black;
   border: 2px solid black;
@@ -8,7 +7,7 @@
   border-radius: 5px;
   background-color: white;
   display: grid;
-  grid-template-rows: 0.5fr auto 0.5fr;
+  grid-template-rows: auto;
   justify-content: center;
   box-shadow: 10px 10px 10px;
   align-content: center;
