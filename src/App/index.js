@@ -5,7 +5,7 @@ import Container from "./Container";
 import Form from "./Form";
 import Result from "./Result";
 import Footer from "./Footer";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { currencies } from "./currencies";
 
 function App() {
