@@ -2,11 +2,11 @@ import "./style.css";
 import { useState, useEffect } from "react";
 
 const Clock = () => {
-  const [theDate, setTheDate] = useState(new Date());
+  const [date, setDate] = useState(new Date());
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setTheDate(new Date());
+      setDate(new Date());
     }, 1000);
 
     return () => {
@@ -14,19 +14,21 @@ const Clock = () => {
     };
   }, []);
 
+  
+
   return (
     <p className="clock">
       <span>
         {" "}
         Dzisiaj jest{" "}
-        {theDate.toLocaleDateString("pl", {
+        {date.toLocaleDateString("pl", {
           weekday: "long",
           day: "numeric",
           month: "long",
         })}
       </span>
       {","}&nbsp;
-      <span>{theDate.toLocaleTimeString()}</span>
+      <span>{date.toLocaleTimeString()}</span>
     </p>
   );
 };
