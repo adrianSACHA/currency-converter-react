@@ -2,31 +2,29 @@
 ![Currency Converter with REACT](public/currencyConverter.png)
 
 ## Table of content
-1. Demo ✅
-1. Preview 👀
-1. Description 📒
-1. Technologies 💻
+1. Demo
+1. Preview
+1. Description
+1. Technologies
 1. Getting started
 
-## ✅ DEMO
+## DEMO
 https://adriansacha.github.io/currency-converter-react/
 
-## 👀 PREVIEW
+## PREVIEW
 ![Currency Converter React Demo](currencyConverterReact.gif)
 
-## 📒 Description
-Simple currency conventer from PLN to 💷GBP and 💵USD.
+## Description
+Simple currency conventer from PLN to GBP and USD.
 Type ammount you want to exchange and press "Przelicz". You wille have above button result showing ammount and currency.
 
-## 💻 Technologies
+## Technologies
 * HTML
 * CSS
 * BEM
 * JavaScript
-* Flex
-* Grid 
+* Flex, Grid 
 * ES6+ features
-* Markdown
 * Create React App
 * Babel
 * Webpack
