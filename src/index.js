@@ -11,9 +11,8 @@ root.render(
   <React.StrictMode>
     <GlobalStyle />
     <ThemeProvider theme={theme}>
-    <App />
+      <App />
     </ThemeProvider>
-    
   </React.StrictMode>
 );
 
