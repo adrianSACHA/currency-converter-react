@@ -1,4 +1,4 @@
-import "../index.css";
+import { GlobalStyle } from "../GlobalStyle";
 import Clock from "./Clock";
 import Header from "./Header";
 import Container from "./Container";
