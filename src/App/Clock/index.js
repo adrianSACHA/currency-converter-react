@@ -1,4 +1,4 @@
-import "./style.css";
+import { StyledParagraph } from "./styled";
 import { useCurrentDate } from "./useCurrentDate";
 
 const Clock = () => {
@@ -13,10 +13,11 @@ const Clock = () => {
       minute: "2-digit",
       second: "2-digit",
     });
+    
   return (
-    <p className="clock">
-      <span>Dzisiaj jest {formattedDate(actualDate)}</span>
-    </p>
+    <StyledParagraph>
+      Dzisiaj jest {formattedDate(actualDate)}
+    </StyledParagraph>
   );
 };
 
