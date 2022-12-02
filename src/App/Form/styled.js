@@ -39,17 +39,17 @@ export const StyledSelect = styled.select`
 
 export const Button = styled.button`
   border: none;
-  background-color: hsl(180, 100%, 25%);
-  color: white;
+  background-color: ${({ theme }) => theme.color.teal};
+  color: ${({ theme }) => theme.color.white};
   padding: 10px;
   border-radius: 5px;
   width: 100%;
 
   &:hover {
-    background-color: hsl(180, 100%, 30%);
+    background-color: ${({ theme }) => theme.color.persianGreen};
   }
 
   &:active {
-    background-color: hsl(180, 100%, 35%);
+    background-color: ${({ theme }) => theme.color.bondiBlue};
   }
 `;

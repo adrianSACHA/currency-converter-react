@@ -2,7 +2,7 @@ import { useState } from "react";
 import { currencies } from "../currencies";
 import { Button, Header, Input, StyledForm, StyledSelect } from "./styled";
 
-const Form = ({ calculateResult, setResult, body, title }) => {
+const Form = ({ calculateResult, setResult, body }) => {
   const [ammonutExchange, setAmmountExchange] = useState("");
   const [currency, setCurrency] = useState(currencies[0].short);
 
