@@ -1,4 +1,6 @@
-.container {
+import styled from "styled-components";
+
+export const StyledMain = styled.main`
   max-width: 650px;
   margin: 15px;
   color: black;
@@ -11,4 +13,4 @@
   justify-content: center;
   box-shadow: 10px 10px 10px;
   align-content: center;
-}
+`;
