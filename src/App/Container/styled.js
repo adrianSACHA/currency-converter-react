@@ -3,11 +3,11 @@ import styled from "styled-components";
 export const StyledMain = styled.main`
   max-width: 650px;
   margin: 15px;
-  color: black;
+  color: ${({ theme }) => theme.color.black};
   border: 2px solid black;
   padding: 5px;
   border-radius: 5px;
-  background-color: white;
+  background-color: ${({ theme }) => theme.color.white};
   display: grid;
   grid-template-rows: auto;
   justify-content: center;
