@@ -1,9 +1,9 @@
-import "./style.css";
+import { StyledResult } from "./styled";
 
-const Result = ({ result }) => (
-  <div className="result">
-    Otrzymasz: &nbsp; <strong>{result}</strong>
-  </div>
+const Result = ({ result, title }) => (
+  <StyledResult >
+    {title} <strong>{result}</strong>
+  </StyledResult>
 );
 
 export default Result;
