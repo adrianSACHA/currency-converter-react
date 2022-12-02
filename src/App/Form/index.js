@@ -1,8 +1,8 @@
-import "./style.css";
 import { useState } from "react";
 import { currencies } from "../currencies";
+import { Button, Header, Input, StyledForm, StyledSelect } from "./styled";
 
-const Form = ({ calculateResult, setResult, body }) => {
+const Form = ({ calculateResult, setResult, body, title }) => {
   const [ammonutExchange, setAmmountExchange] = useState("");
   const [currency, setCurrency] = useState(currencies[0].short);
 
@@ -14,25 +14,23 @@ const Form = ({ calculateResult, setResult, body }) => {
   };
 
   return (
-    <form className="form" onSubmit={onFormSubmit}>
-      <label className="form__input">
-        <span>Wpisz kwotę *:</span>
-        <input
-          className="form__ammount"
+    <StyledForm onSubmit={onFormSubmit}>
+      <Header>
+        Wpisz kwotę *:
+        <Input
           placeholder="jaką chcesz policzyć"
           type="number"
-          autofocus
+          autoFocus
           name="ammount"
           step="0.01"
           value={ammonutExchange}
           onChange={({ target }) => setAmmountExchange(target.value)}
           required
         />
-      </label>
-      <label className="form__selection">
-        <span>Wybierz walutę:</span>
-        <select
-          className="form__select"
+      </Header>
+      <Header>
+        Wybierz walutę:
+        <StyledSelect
           name="currency"
           value={currency}
           onChange={({ target }) => setCurrency(target.value)}
@@ -43,13 +41,15 @@ const Form = ({ calculateResult, setResult, body }) => {
             </option>
           ))}
           ;
-        </select>
-      </label>
-      <label className="form__footer">
+        </StyledSelect>
+      </Header>
+      <Header footer>
         {body}
-        <button className="form__button">Przelicz!</button>
-      </label>
-    </form>
+        <Button>
+          Przelicz!
+        </Button>
+      </Header>
+    </StyledForm>
   );
 };
 
