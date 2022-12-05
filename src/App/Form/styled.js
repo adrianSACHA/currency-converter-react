@@ -9,7 +9,7 @@ export const StyledForm = styled.form`
   align-items: center;
 `;
 
-export const Header = styled.label`
+export const Label = styled.label`
   padding: 5px;
   margin: 5px;
 

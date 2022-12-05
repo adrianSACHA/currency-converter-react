@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { currencies } from "../currencies";
-import { Button, Header, Input, StyledForm, StyledSelect } from "./styled";
+import { Button, Label, Input, StyledForm, StyledSelect } from "./styled";
 
 const Form = ({ calculateResult, setResult, body }) => {
   const [ammonutExchange, setAmmountExchange] = useState("");
@@ -15,7 +15,7 @@ const Form = ({ calculateResult, setResult, body }) => {
 
   return (
     <StyledForm onSubmit={onFormSubmit}>
-      <Header>
+      <Label>
         Wpisz kwotę *:
         <Input
           placeholder="jaką chcesz policzyć"
@@ -27,8 +27,8 @@ const Form = ({ calculateResult, setResult, body }) => {
           onChange={({ target }) => setAmmountExchange(target.value)}
           required
         />
-      </Header>
-      <Header>
+      </Label>
+      <Label>
         Wybierz walutę:
         <StyledSelect
           name="currency"
@@ -42,13 +42,13 @@ const Form = ({ calculateResult, setResult, body }) => {
           ))}
           ;
         </StyledSelect>
-      </Header>
-      <Header footer>
+      </Label>
+      <Label footer>
         {body}
         <Button>
           Przelicz!
         </Button>
-      </Header>
+      </Label>
     </StyledForm>
   );
 };
