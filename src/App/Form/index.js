@@ -1,15 +1,16 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Button, Label, Input, StyledForm, StyledSelect } from "./styled";
 
 const Form = ({ calculateResult, setResult, body, ratesData }) => {
   const [amountExchange, setAmountExchange] = useState("");
   const [currency, setCurrency] = useState("EUR");
+  const inputRef = useRef(null);
 
   const onFormSubmit = (event) => {
     event.preventDefault();
     calculateResult(amountExchange, currency);
     setAmountExchange("");
-    setResult("");
+    inputRef.current.focus();
   };
 
   return (
@@ -32,6 +33,7 @@ const Form = ({ calculateResult, setResult, body, ratesData }) => {
             <Input
               placeholder="jaką chcesz policzyć"
               type="number"
+              ref={inputRef}
               min="0.01"
               step="0.01"
               value={amountExchange}
