@@ -1,54 +1,70 @@
 import { useState } from "react";
-import { currencies } from "../currencies";
 import { Button, Label, Input, StyledForm, StyledSelect } from "./styled";
 
-const Form = ({ calculateResult, setResult, body }) => {
-  const [ammonutExchange, setAmmountExchange] = useState("");
-  const [currency, setCurrency] = useState(currencies[0].short);
+const Form = ({ calculateResult, setResult, body, ratesData }) => {
+  const [amountExchange, setAmountExchange] = useState("");
+  const [currency, setCurrency] = useState("EUR");
 
   const onFormSubmit = (event) => {
     event.preventDefault();
-    calculateResult(ammonutExchange, currency);
-    setAmmountExchange("");
+    calculateResult(amountExchange, currency);
+    setAmountExchange("");
     setResult("");
   };
 
   return (
-    <StyledForm onSubmit={onFormSubmit}>
-      <Label>
-        Wpisz kwotę *:
-        <Input
-          placeholder="jaką chcesz policzyć"
-          type="number"
-          autoFocus
-          name="ammount"
-          step="0.01"
-          value={ammonutExchange}
-          onChange={({ target }) => setAmmountExchange(target.value)}
-          required
-        />
-      </Label>
-      <Label>
-        Wybierz walutę:
-        <StyledSelect
-          name="currency"
-          value={currency}
-          onChange={({ target }) => setCurrency(target.value)}
-        >
-          {currencies.map((currency) => (
-            <option key={currency.short} value={currency.short}>
-              {currency.name}
-            </option>
-          ))}
-          ;
-        </StyledSelect>
-      </Label>
-      <Label footer>
-        {body}
-        <Button>
-          Przelicz!
-        </Button>
-      </Label>
+    <StyledForm 
+    onSubmit={onFormSubmit}>
+      {ratesData.status === "loading" ? (
+        <p>Trwa ładowanie danych... Prosimy o chwileczkę cierpliwości</p>
+      ) 
+      : (ratesData.status === "error") 
+      ? (
+          <p>
+            Przepraszamy coś poszło nie tak. Sprawdź czy masz połącznie z
+            internetem. Jeśli tak to widocznie nasz błąd. Spróbuj później.
+          </p>
+      ) 
+      : (
+        <>
+          <Label>
+            Wpisz kwotę *:
+            <Input
+              placeholder="jaką chcesz policzyć"
+              type="number"
+              min="0.01"
+              step="0.01"
+              value={amountExchange}
+              onChange={({ target }) => setAmountExchange(target.value)}
+              required
+            />
+          </Label>
+          <Label>
+            Wybierz walutę:
+            <StyledSelect
+              name="currencyConverted"
+              value={currency}
+              onChange={({ target }) => setCurrency(target.value)}
+            >
+              {Object.keys(ratesData.rates).map((rates) => (
+                <option 
+                key={rates} 
+                value={rates}
+                >
+                  {rates}
+                </option>
+              ))};
+            </StyledSelect>
+          </Label>
+          <Label footer>
+            {body}
+            <Button>Przelicz!</Button>
+          </Label>
+          <Label>
+          Kursy walut pobierane są z Europejskiego Centralnego Banku z datą: {ratesData.date}.
+          </Label>
+        </>
+      )}
     </StyledForm>
   );
 };
