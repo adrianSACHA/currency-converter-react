@@ -1,8 +1,15 @@
 import { StyledResult } from "./styled";
 
-const Result = ({ result, title }) => (
-  <StyledResult >
-    {title} <strong>{result}</strong>
+const Result = ({ result, title, ratesData }) => (
+  <StyledResult>
+    {ratesData.status === "success" 
+    ? 
+      <>
+        {title} <strong>{result.resultFinal}</strong>
+        
+      </>
+     : null
+     }
   </StyledResult>
 );
 
