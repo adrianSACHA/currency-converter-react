@@ -5,7 +5,7 @@ const Result = ({ result, title, ratesData }) => (
     {ratesData.status === "success" 
     ? 
       <>
-        {title} <strong>{result.resultFinal}</strong>
+        {title} <strong>{result.resultFinal}&nbsp;{result.currency} </strong>
         
       </>
      : null
