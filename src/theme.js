@@ -5,5 +5,6 @@ export const theme = {
     persianGreen: "#009999",
     bondiBlue: "#00B3B3",
     teal: "#008080",
+    monza: "#E70419"
   },
 };
