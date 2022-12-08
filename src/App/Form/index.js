@@ -1,5 +1,13 @@
 import { useState, useRef } from "react";
-import { Button, Label, Input, StyledForm, StyledSelect } from "./styled";
+import {
+  Button,
+  Label,
+  Input,
+  StyledForm,
+  StyledSelect,
+  Info,
+  Loading,
+} from "./styled";
 
 const Form = ({ calculateResult, setResult, body, ratesData }) => {
   const [amountExchange, setAmountExchange] = useState("");
@@ -14,19 +22,17 @@ const Form = ({ calculateResult, setResult, body, ratesData }) => {
   };
 
   return (
-    <StyledForm 
-    onSubmit={onFormSubmit}>
+    <StyledForm onSubmit={onFormSubmit}>
       {ratesData.status === "loading" ? (
-        <p>Trwa ładowanie danych... Prosimy o chwileczkę cierpliwości</p>
-      ) 
-      : (ratesData.status === "error") 
-      ? (
-          <p>
-            Przepraszamy coś poszło nie tak. Sprawdź czy masz połącznie z
-            internetem. Jeśli tak to widocznie nasz błąd. Spróbuj później.
-          </p>
-      ) 
-      : (
+        <Loading>
+          Trwa ładowanie danych... Prosimy o chwileczkę cierpliwości
+        </Loading>
+      ) : ratesData.status === "error" ? (
+        <Loading error>
+          Przepraszamy coś poszło nie tak. Sprawdź czy masz połącznie z
+          internetem. Jeśli tak to widocznie nasz błąd. Spróbuj później.
+        </Loading>
+      ) : (
         <>
           <Label>
             Wpisz kwotę *:
@@ -49,22 +55,21 @@ const Form = ({ calculateResult, setResult, body, ratesData }) => {
               onChange={({ target }) => setCurrency(target.value)}
             >
               {Object.keys(ratesData.rates).map((rates) => (
-                <option 
-                key={rates} 
-                value={rates}
-                >
+                <option key={rates} value={rates}>
                   {rates}
                 </option>
-              ))};
+              ))}
+              ;
             </StyledSelect>
           </Label>
           <Label footer>
             {body}
             <Button>Przelicz!</Button>
           </Label>
-          <Label>
-          Kursy walut pobierane są z Europejskiego Centralnego Banku z datą: {ratesData.date}.
-          </Label>
+          <Info>
+            Kursy walut pobierane są z Europejskiego Centralnego Banku z datą:
+            <br /> <strong>{ratesData.date}</strong>
+          </Info>
         </>
       )}
     </StyledForm>

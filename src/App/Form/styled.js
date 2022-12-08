@@ -21,6 +21,22 @@ export const Label = styled.label`
     `}
 `;
 
+export const Loading = styled(Label)`
+  font-size: x-large;
+  width: 300px;
+
+  ${({ error }) =>
+    error &&
+    css`
+      font-size: large;
+      color: ${({ theme }) => theme.color.monza};
+    `} 
+`;
+
+export const Info = styled(Label)`
+  width: 70%;
+`;
+
 export const Input = styled.input`
   padding: 5px;
   margin: 10px;
