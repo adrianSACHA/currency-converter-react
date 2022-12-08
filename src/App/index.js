@@ -15,22 +15,22 @@ function App() {
     const rateExchange = ratesData.rates[currency];
 
     setResult({
-      resultFinal: (+amountExchange * rateExchange).toFixed(2), currency,
+      resultFinal: (+amountExchange * rateExchange).toFixed(2),
+      currency,
     });
   };
 
   return (
     <Container>
       <Clock />
-      <Header title="Kalkulator Walutowy - aktualny na 12.10.2022" />
+      <Header title="Kalkulator Walutowy" />
       <Form
-        calculateResult={calculateResult} 
-        ratesData={ratesData} 
+        calculateResult={calculateResult}
+        ratesData={ratesData}
         setResult={setResult}
         body={
-          <Result result={result} 
-          ratesData={ratesData} 
-          title="Otrzymasz:" />}
+          <Result result={result} ratesData={ratesData} title="Otrzymasz:" />
+        }
       />
       <Footer title="* pole obowiązkowe" />
     </Container>
