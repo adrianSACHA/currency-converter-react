@@ -5,15 +5,18 @@ import Form from "./Form";
 import Result from "./Result";
 import Footer from "./Footer";
 import { useState } from "react";
-import { currencies } from "./currencies";
+import { useCurrencies } from "./useCurrencies";
 
 function App() {
-  const [result, setResult] = useState(null);
+  const [result, setResult] = useState({});
+  const ratesData = useCurrencies();
 
-  const calculateResult = (ammountExchange, currency) => {
-    const { rate, short } = currencies.find(({ short }) => short === currency);
+  const calculateResult = (amountExchange, currency) => {
+    const rateExchange = ratesData.rates[currency];
 
-    setResult((ammountExchange / rate).toFixed(2) + short);
+    setResult({
+      resultFinal: (+amountExchange * rateExchange).toFixed(2), currency,
+    });
   };
 
   return (
@@ -21,8 +24,13 @@ function App() {
       <Clock />
       <Header title="Kalkulator Walutowy - aktualny na 12.10.2022" />
       <Form
-        calculateResult={calculateResult}
-        body={<Result result={result} title="Otrzymasz:" />}
+        calculateResult={calculateResult} 
+        ratesData={ratesData} 
+        setResult={setResult}
+        body={
+          <Result result={result} 
+          ratesData={ratesData} 
+          title="Otrzymasz:" />}
       />
       <Footer title="* pole obowiązkowe" />
     </Container>
