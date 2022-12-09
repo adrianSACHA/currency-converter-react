@@ -21,18 +21,21 @@ const Form = ({ calculateResult, setResult, body, ratesData }) => {
     setAmountExchange("");
     inputRef.current.focus();
   };
-  const {status, date, rates} = ratesData;
+  const { status, date, rates } = ratesData;
 
   return (
     <StyledForm onSubmit={onFormSubmit}>
       {status === "loading" ? (
         <Loading>
-          Trwa ładowanie danych...<br /> Prosimy o chwileczkę cierpliwości
+          Trwa ładowanie danych...
+          <br /> Prosimy o chwileczkę cierpliwości
         </Loading>
       ) : status === "error" ? (
         <Message>
-          Przepraszamy coś poszło nie tak. <br />Sprawdź czy masz połącznie z
-          internetem.<br /> Jeśli tak to widocznie nasz błąd.<br /> Spróbuj później.
+          Przepraszamy coś poszło nie tak. <br />
+          Sprawdź czy masz połącznie z internetem.
+          <br /> Jeśli tak to widocznie nasz błąd.
+          <br /> Spróbuj później.
         </Message>
       ) : (
         <>
