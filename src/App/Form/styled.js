@@ -12,6 +12,11 @@ export const StyledForm = styled.form`
 export const Label = styled.label`
   padding: 5px;
   margin: 5px;
+  width: 500px;
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}px) {
+    max-width: 280px;
+  }
 
   ${({ footer }) =>
     footer &&
@@ -23,14 +28,21 @@ export const Label = styled.label`
 
 export const Loading = styled(Label)`
   font-size: x-large;
-  width: 300px;
+  min-height: 315px;
+  justify-items: center;
 
-  ${({ error }) =>
-    error &&
-    css`
-      font-size: large;
-      color: ${({ theme }) => theme.color.monza};
-    `} 
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}px) {
+    font-size: large;
+  }
+`;
+
+export const Message = styled(Loading)`
+  font-size: x-large;
+  color: ${({ theme }) => theme.color.monza};
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}px) {
+    font-size: large;
+  }
 `;
 
 export const Info = styled(Label)`
