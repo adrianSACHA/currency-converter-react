@@ -5,10 +5,9 @@ export const theme = {
     persianGreen: "#009999",
     bondiBlue: "#00B3B3",
     teal: "#008080",
-    monza: "#E70419"
+    monza: "#E70419",
   },
   breakPoint: {
-mobile: 560
+    mobile: 560,
   },
 };
-
