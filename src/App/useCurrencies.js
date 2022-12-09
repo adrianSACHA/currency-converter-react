@@ -11,17 +11,19 @@ export const useCurrencies = () => {
   useEffect(() => {
     const dataApi = async () => {
       try {
-        const response = await axios.get("https://api.exchangerate.host/latest?base=PLN");
+        const response = await axios.get(
+          "https://api.exchangerate.host/latest?base=PLN"
+        );
         setRatesData({
           date: response.data.date,
           rates: response.data.rates,
           status: "success",
         });
       } catch (error) {
-               setRatesData({
-                  status: "error"
+        setRatesData({
+          status: "error",
         });
-      };
+      }
     };
     setTimeout(dataApi, 3000);
   }, []);
