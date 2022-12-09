@@ -7,4 +7,8 @@ export const theme = {
     teal: "#008080",
     monza: "#E70419"
   },
+  breakPoint: {
+mobile: 560
+  },
 };
+
