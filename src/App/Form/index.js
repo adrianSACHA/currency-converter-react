@@ -7,6 +7,7 @@ import {
   StyledSelect,
   Info,
   Loading,
+  Message,
 } from "./styled";
 
 const Form = ({ calculateResult, setResult, body, ratesData }) => {
@@ -20,18 +21,19 @@ const Form = ({ calculateResult, setResult, body, ratesData }) => {
     setAmountExchange("");
     inputRef.current.focus();
   };
+  const {status, date, rates} = ratesData;
 
   return (
     <StyledForm onSubmit={onFormSubmit}>
-      {ratesData.status === "loading" ? (
+      {status === "loading" ? (
         <Loading>
-          Trwa ładowanie danych... Prosimy o chwileczkę cierpliwości
+          Trwa ładowanie danych...<br /> Prosimy o chwileczkę cierpliwości
         </Loading>
-      ) : ratesData.status === "error" ? (
-        <Loading error>
-          Przepraszamy coś poszło nie tak. Sprawdź czy masz połącznie z
-          internetem. Jeśli tak to widocznie nasz błąd. Spróbuj później.
-        </Loading>
+      ) : status === "error" ? (
+        <Message>
+          Przepraszamy coś poszło nie tak. <br />Sprawdź czy masz połącznie z
+          internetem.<br /> Jeśli tak to widocznie nasz błąd.<br /> Spróbuj później.
+        </Message>
       ) : (
         <>
           <Label>
@@ -54,7 +56,7 @@ const Form = ({ calculateResult, setResult, body, ratesData }) => {
               value={currency}
               onChange={({ target }) => setCurrency(target.value)}
             >
-              {Object.keys(ratesData.rates).map((rates) => (
+              {Object.keys(rates).map((rates) => (
                 <option key={rates} value={rates}>
                   {rates}
                 </option>
@@ -68,7 +70,7 @@ const Form = ({ calculateResult, setResult, body, ratesData }) => {
           </Label>
           <Info>
             Kursy walut pobierane są z Europejskiego Centralnego Banku z datą:
-            <br /> <strong>{ratesData.date}</strong>
+            <br /> <strong>{date}</strong>
           </Info>
         </>
       )}
