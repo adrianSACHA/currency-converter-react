@@ -7,6 +7,7 @@ export const StyledForm = styled.form`
   justify-items: center;
   justify-content: center;
   align-items: center;
+  min-height: 325px;
 `;
 
 export const Label = styled.label`
